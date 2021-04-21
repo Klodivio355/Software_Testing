@@ -139,7 +139,7 @@ public class DataParser {
     public static void main(String[] args) {
 
         // This path may need to be changed as IntelliJ seems to only work with absolute paths
-        String path = "/Users/maximefontana/Desktop/Third_Year/Testing/com3529-code/practicals/src/main/java/uk/ac/shef/com3529/practicals/BMICalculator.java";
+        String path = "/Users/maximefontana/Desktop/Third_Year/Testing/com3529-code/practicals/src/main/java/uk/ac/shef/com3529/practicals/Classification.java";
         List<String> logic_statements = Arrays.asList("if ", "else if ", "else ", "while ", "for ");
 
         try {
@@ -176,12 +176,9 @@ public class DataParser {
                 ArrayList<Relation> relations = new ArrayList<Relation>();
 
                 if (processed_parenthesis.size() > 1) { // check if multiple
-                    //System.out.println(processed_parenthesis.get(1));
                     int left_id = processed_parenthesis.get(0).id;
                     int right_id = processed_parenthesis.get(1).id;
-                    //System.out.println(inside_parenthesis);
                     Relation.RelationType relation_type = parseRelationType(inside_parenthesis);
-                    //System.out.println(relation_type);
                     Relation relation = new Relation(left_id, right_id, relation_type);
                     relations.add(relation);
                 }
@@ -214,15 +211,13 @@ public class DataParser {
                 System.out.println(elem);
             }
 
-            System.out.println("------HERE ARE THE NODES-------"); // you could apply Testing here
-            for (LogicStatementNode node : results){
-                System.out.println(node);
-            }
+            System.out.println("------TESTING-------"); // you could apply Testing here
+            Coverage.randomlyTestClassify(results, complete_truth_table);
 
-            /*MethodTree main_tree = new MethodTree(results.get(0));
-            for (int i = 1; i<results.size(); i++){
-                main_tree.insert(results.get(i));
-            }*/
+            System.out.println("-------------MCDC TABLE AFTER TESTING-----------");
+            for (Criterion elem : complete_truth_table){
+                System.out.println(elem);
+            }
 
             // At this point, the nodes have been stored in the data structure MethodTree. Now we need to process it and perform our
             // Software Testing Techniques

@@ -43,7 +43,6 @@ public class LogicStatementNode {
     }
 
     public String toString(){
-        //return "Type :" + this.type + " Left : (" + this.left.toString() + ") Right : " + this.right.toString();
         return "Node ID : " + this.id + " , Type :" + this.type + " , Dependency on " + dependent_on + " , Statements " + this.statements +
                 " , Relations " + relations;
     }
