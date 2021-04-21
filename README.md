@@ -54,13 +54,13 @@ After that, it should be good to run DataParser.java and to watch what the comma
 
 Now, let's take for example the method provided in the assignment's description pdf. The BMICalculator.java class.
 
-![Image](https://ibb.co/DVnxRnH)
+https://ibb.co/DVnxRnH
 
 On the image above, you should expect to have this showing on the command line. The first bine showed the lines that are gonna be processed by the parcer, then, it creates objects with those lines (Processing node : i), then it shows per node, what truth table is being computed, and what MCDC requirements are being kept. All these requirements are then summarised. 
 
 After such processing, we can move on to perform testing on these nodes. The image below shows how the testing process is being carried out. 
 
-![Image2](https://ibb.co/34Ln1M8)
+https://ibb.co/34Ln1M8
 
 On the image above, we can see that at each iteration of testing, it prompts the number of the iteration, then notifies what number was generated and its progression throughout the method and notifies accordingly whenever a new MCDC requirement has been satisfied or whether a branch has evaluated to true and therefore where it has stopped. This output is the one you have high probability to get on the BMICalculator.java with MIN = 10, MAX = 50 and ITERATIONS = 100.
 
@@ -70,7 +70,7 @@ I prepared another method, Classification.java, and I knowingly made it look bad
 
 If you run DataParser.java on this, you should expect to have this output with MIN = 0, MAX = 20 (assuming the method can only be given that), ITERATIONS = 100 (To be changed in Coverage.java)
 
-![Image3](https://ibb.co/2Mf3B4g).
+https://ibb.co/2Mf3B4g
 
 And indeed it manages to find it, as of course, if the value equals 10 it cannot be greater than 15. Both cannot evaluate to true, even though the predicate overall returns true as it is a OR operator
 
