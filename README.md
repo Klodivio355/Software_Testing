@@ -54,6 +54,31 @@ After that, it should be good to run DataParser.java and to watch what the comma
 
 Now, let's take for example the method provided in the assignment's description pdf. The BMICalculator.java class.
 
+![](https://ibb.co/DVnxRnH)
 
+On the image above, you should expect to have this showing on the command line. The first bine showed the lines that are gonna be processed by the parcer, then, it creates objects with those lines (Processing node : i), then it shows per node, what truth table is being computed, and what MCDC requirements are being kept. All these requirements are then summarised. 
 
+After such processing, we can move on to perform testing on these nodes. The image below shows how the testing process is being carried out. 
+
+![](https://ibb.co/34Ln1M8)
+
+On the image above, we can see that at each iteration of testing, it prompts the number of the iteration, then notifies what number was generated and its progression throughout the method and notifies accordingly whenever a new MCDC requirement has been satisfied or whether a branch has evaluated to true and therefore where it has stopped. This output is the one you have high probability to get on the BMICalculator.java with MIN = 10, MAX = 50 and ITERATIONS = 100.
+
+## Example
+
+I prepared another method, Classification.java, and I knowingly made it look bad and not intuitive. It classifies a mark (out of 20) into 4 categories. You can clearly notice that the function is quite weird in the way it's logic is implemented (switching variables in unconventional way). There is also an unreachable criterion, I wanted my system to be able to retrieve it. Let's find out!
+
+If you run DataParser.java on this, you should expect to have this output with MIN = 0, MAX = 20 (assuming the method can only be given that), ITERATIONS = 100 (To be changed in Coverage.java)
+
+![](https://ibb.co/2Mf3B4g).
+
+And indeed it manages to find it, as of course, if the value equals 10 it cannot be greater than 15. Both cannot evaluate to true, even though the predicate overall returns true as it is a OR operator
+
+## Discussion
+
+I understand that this solution is quite limited but I also think that it introduces some nice and extendable basis code to implement more advanced techniques of testing. I also wanted to point out that I have spent most of time trying to figure out how I could make my system work with complex codes involving loops and dependency on outer IF statements for instance but again, this feature could be implemented by tweaking the parser and maybe the objects so that it takes into consideration the dependency of even the tabs in the code analysis. Many more features could extended but requires a lot of work that I believe I cannot do in the indicative time given.
+
+I truly enjoyed this assignment!
+
+Thank you!
 
