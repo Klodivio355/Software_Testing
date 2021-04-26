@@ -10,10 +10,10 @@ in : uk/ac/shef/com3529/practicals.
 
 I will thereby present all the files I included.
 
-DataParser.java -> This file is the only runnable java class, it is the class that parses the java method and run testing.
-Coverage.java -> Implements the main functions related to testing.
+DataParser.java -> This file is the only runnable java class, it is the class that parses the java method and run testing. <br />
+Coverage.java -> Implements the main functions related to testing. <br />
 MethodTree.java -> This file has been kept to show my thinking process but is not used in my solution, this is a data structure that aimed at
-replicating a branch coverage tree that was originally meant to store complex architecture (loops) for methods in a BST.
+replicating a branch coverage tree that was originally meant to store complex architecture (loops) for methods in a BST. <br />
 
 Relation.java , LogicStatementNode.java, Statement.java, Criterion.java -> Java classes for objects and their respective constructors and toStrings.
 
